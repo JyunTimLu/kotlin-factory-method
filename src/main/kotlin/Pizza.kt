@@ -1,4 +1,4 @@
-class Pizza {
+abstract class Pizza {
 
     var name: String = ""
     var dough: String = ""

@@ -1,9 +1,19 @@
 
 class PizzaStore {
 
-    fun orderPizza(): Pizza {
+    fun orderPizza(type: String): Pizza {
 
-        val pizza = Pizza()
+        var pizza : Pizza
+
+        if (type == "cheese") {
+            pizza =  CheesePizza()
+        } else if (type == "clam") {
+            pizza = ClamPizza()
+        } else if (type == "veggiePizza") {
+            pizza = VeggiePizza()
+        } else {
+            throw Exception()
+        }
 
         pizza.prepare()
         pizza.bake()
