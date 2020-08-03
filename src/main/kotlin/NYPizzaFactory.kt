@@ -1,3 +1,8 @@
+import concrete_product.CheesePizza
+import concrete_product.ClamPizza
+import concrete_product.VeggiePizza
+import product.Pizza
+
 class NYPizzaFactory: SimpleFactory() {
 
     override fun createPizza(type: String): Pizza {
@@ -5,7 +10,7 @@ class NYPizzaFactory: SimpleFactory() {
         var pizza : Pizza
 
         if (type == "cheese") {
-            pizza =  CheesePizza()
+            pizza = CheesePizza()
         } else if (type == "clam") {
             pizza = ClamPizza()
         } else if (type == "veggiePizza") {

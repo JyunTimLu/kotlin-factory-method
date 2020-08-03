@@ -1,3 +1,6 @@
+package creator
+
+import product.Pizza
 
 abstract class PizzaStore {
 
