@@ -1,9 +1,9 @@
 
-class PizzaStore(val pizzaFactory: SimpleFactory) {
+abstract class PizzaStore {
 
     fun orderPizza(type: String): Pizza {
 
-        var pizza = pizzaFactory.createPizza(type)
+        var pizza = createPizza(type)
 
         pizza.prepare()
         pizza.bake()
@@ -12,5 +12,7 @@ class PizzaStore(val pizzaFactory: SimpleFactory) {
 
         return pizza
     }
+
+    abstract fun createPizza(type: String): Pizza
 
 }

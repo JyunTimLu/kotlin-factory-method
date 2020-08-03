@@ -1,11 +1,7 @@
 fun main() {
 
-    val nyPizzaStore = PizzaStore(NYPizzaFactory())
+    val nyPizzaStore = NYPizzaStore()
 
     nyPizzaStore.orderPizza("cheese")
-
-    val chPizzaStore = PizzaStore(ChicagoPizzaFactory())
-
-    chPizzaStore.orderPizza("cheese")
 
 }
