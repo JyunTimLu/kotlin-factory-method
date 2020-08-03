@@ -1,0 +1,3 @@
+class SlicedPepperoni : Pepperoni {
+
+}

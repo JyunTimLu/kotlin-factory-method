@@ -1,18 +1,23 @@
 package product
 
+import Cheese
+import Clam
+import Dough
+import Sauce
+import Veggie
+
 abstract class Pizza {
 
     var name: String = ""
-    var dough: String = ""
-    var sauce: String = ""
+    lateinit var dough: Dough
+    lateinit var sauce: Sauce
+    lateinit var veggies: List<Veggie>
+    lateinit var cheese: Cheese
+    lateinit var clams: Clam
+
     val toppings = listOf<String>()
 
-    fun prepare() {
-        println("Preparing $name")
-        println("Tossing dough...")
-        println("Adding sauce...")
-        toppings.forEach(::println)
-    }
+    abstract fun prepare()
 
     fun bake() = println("Bake for 25 minutes")
 
