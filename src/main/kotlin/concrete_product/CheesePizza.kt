@@ -3,7 +3,17 @@ package concrete_product
 import PizzaIngredientFactory
 import product.Pizza
 
-class CheesePizza(val pizzaIngredientFactory: PizzaIngredientFactory) : Pizza() {
+//class CheesePizza : Pizza() {
+//
+//    init {
+//        name = "Cheese Pizza"
+//        name = "Cheese product.Pizza"
+//        dough = "dough"
+//        sauce = "Marinara Sauce"
+//    }
+//}
+
+class CheesePizza constructor(val pizzaIngredientFactory: PizzaIngredientFactory) : Pizza() {
 
     override fun prepare() {
         println("preparing $name")
